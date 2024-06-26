@@ -37,3 +37,33 @@ export default function LoginPage() {
         </form>
     )
 }
+
+# Use Effect
+
+    /*
+    useEffect() se ejecuta cuando: 
+    1.- Al terminar de renderizar el componente
+    2.- Al cambiar alguna de sus dependencias    
+
+    Recibe 2 parámentros:
+    1.- Funcion a ejecutar (callback)
+    2.- Un arreglo de dependencias
+    useEffect(()=>{},[])
+    */
+   //Se ejecuta al terminar de renderizar el componente
+   useEffect(()=>{
+    console.log("terminó de renderizarse el componente :D!")
+   },[])
+   //Se ejecuta al cambiar la dependencia count y al terminar de renderizar el componente
+   useEffect(()=> {
+    console.log("use effect count", count)
+   },[count])
+
+   useEffect(()=>{
+    console.log("sin dependencias")
+   }) //Esto hace que siempre que cambie un estado se va a ejecutar
+// loop infinito
+//    useEffect(()=>{
+//     setCount(count+1)
+//     console.log("wooo")
+//    }, [count])

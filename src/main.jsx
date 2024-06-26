@@ -6,7 +6,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom' //Son par
 // Pages
 import LoginPage from './pages/LoginPage'
 import HomePage from './pages/HomePage'
-
+import ProductsPage from './pages/ProductsPage'
+import ProductDetailPage from './pages/ProductDetailPage'
 
 const router = createBrowserRouter([
   {
@@ -19,11 +20,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/productos",
-    element: <p>Productos</p>
+    element: <ProductsPage/>
   },
   {
     path: "/productos/:id",
-    element: <p>Producto: </p>
+    element: <ProductDetailPage/>
   }
 
 ])
