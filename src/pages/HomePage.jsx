@@ -4,7 +4,7 @@ export default function HomePage() {
      
         <div>
             <h1 className="text-4xl font-bold text-center">
-                Hoome Page
+                Home Page
             </h1>
                 <p className="text-center">
                     This is the home page
@@ -13,7 +13,7 @@ export default function HomePage() {
                     
                     <Link to="/login" className="bg-white/10 p-3 rounded w-[15%] text-center">Link de login</Link>
                     <Link to="/productos" className="bg-white/10 p-3 rounded w-[15%] text-center">Productos</Link>
-                    <Link to="/productos/123" className="bg-white/10 p-3 rounded w-[15%] text-center">Producto 123</Link>
+                   
                 </div>
         </div>
 
