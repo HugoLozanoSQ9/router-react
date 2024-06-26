@@ -9,11 +9,11 @@ export default function HomePage() {
                 <p className="text-center">
                     This is the home page
                 </p>
-                <div>
+                <div className="flex flex-col items-center pt-4 gap-2 text-3xl">
                     
-                    <Link to="/login">Link de login</Link>
-                    <Link to="/productos">Productos</Link>
-                    <Link to="/productos/123">Producto 123</Link>
+                    <Link to="/login" className="bg-white/10 p-3 rounded w-[15%] text-center">Link de login</Link>
+                    <Link to="/productos" className="bg-white/10 p-3 rounded w-[15%] text-center">Productos</Link>
+                    <Link to="/productos/123" className="bg-white/10 p-3 rounded w-[15%] text-center">Producto 123</Link>
                 </div>
         </div>
 
