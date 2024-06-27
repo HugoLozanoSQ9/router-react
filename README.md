@@ -67,3 +67,64 @@ export default function LoginPage() {
 //     setCount(count+1)
 //     console.log("wooo")
 //    }, [count])
+
+
+# Next.js
+El framework de react
+hacer renderizado por parte del servidor 
+
+Existe Next y Remix  para react
+
+Para no solamente react podemos ocupar astro 
+sveltkit para svelt
+Vue --> nuxt
+
+Objetivo :
+-Conocer Next.js
+-Saber cuando y por qué usarlo
+-Entender que porblemas soluciona
+
+
+Front end y sus inicios...
+
+HTML CSS JS
+
+### Modelo cliente servidor
+
+(req, res)
+Cliente manda una req, el servidor genera una res respondiendo el trio HTML CSS y Js
+
+## Estrategias de renderizado
+
+Client Side Rendering 
+
+-Cargar todo el contenido del lado del cliente
+-Suele ser más lento 
+-Carga mucho más js al cliente
+-Malo para el SEO 
+
+Server Side Rendering (Entrega el HTML ya renderizado)
+-Generar el contenido en el servidor
+-Minimiza la carga para el cliente
+-Aún puede ser una página interactiva que carga información de lado del cliente
+-Bueno para el SEO 
+
+Static Site Generation
+
+-Generar el contenido en el servidor
+-Vuelve casi nula la carga para el cliente
+-Suele ser el más rápido de todos
+-No deja cargar más contenido a la página más allá del original
+-Buenisimo para el SEO 
+(el server entrega el achivo que ya estaba hecho)
+(No se pueden personalizar los archivos a solicitud del cliente)
+
+## NEXT sirve para las 3
+¿Por qué esto es importante? 
+-Velocidad de carga = más ventas
+-SEO 
+-Entender que problemas resuelve
+
+¿Que es NEXT?
+Es un framework de react
+

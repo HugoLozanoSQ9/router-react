@@ -8,32 +8,38 @@ import LoginPage from './pages/LoginPage'
 import HomePage from './pages/HomePage'
 import ProductsPage from './pages/ProductsPage'
 import ProductDetailPage from './pages/ProductDetailPage'
+import MainLayout from './layouts/MainLayout'
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <HomePage/>
+    element: <MainLayout />,
+    children: [
+      {
+        path: "/productos",
+        element: <ProductsPage />
+      },
+      {
+        path: "/productos/:id",
+        element: <ProductDetailPage />
+      },
+      {
+        path: "/",
+        element: <HomePage/>
+      }
+    ]
   },
   {
     path: "/login",
-    element: <LoginPage/>
+    element: <LoginPage />
   },
-  {
-    path: "/productos",
-    element: <ProductsPage/>
-  },
-  {
-    path: "/productos/:id",
-    element: <ProductDetailPage/>
-  }
 
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
 
   <>
-  <Toaster/>
-
-  <RouterProvider router={router} />
+    <Toaster />
+    <RouterProvider router={router} />
   </>
 )

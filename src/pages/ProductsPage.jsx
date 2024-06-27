@@ -2,20 +2,14 @@ import { useEffect, useState } from "react"
 import { getProducts } from "../api"
 import { toast } from "sonner"
 import { Link } from "react-router-dom"
-import { useNavigate } from 'react-router-dom'
+import  useAuth  from "../hooks/useAuth.js"
 
 export default function ProductsPage() {
 
     const [products, setProducts] = useState([])
-    const navigate = useNavigate()
-
+//  const token = useAuth()
+    useAuth()
     useEffect(() => {
-        const token = localStorage.getItem("Token")
-        if(!token){
-            toast.error("Debes iniciar sesión para ver los productos :D!")
-            navigate("/login")
-            return
-        }
         getProducts()
             .then((prods) => {
                 setProducts(prods)

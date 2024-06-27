@@ -2,18 +2,14 @@ import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import { getProduct } from "../api"
 import { toast } from "sonner"
+import useAuth from "../hooks/useAuth.js"
 
 export default function ProductDetailPage() {
+    useAuth()
     const { id } = useParams() //Este id lo jalamos desde el main (de products/:id)
     const [product, setProduct] = useState({})
 
     useEffect(() => {
-        const token = localStorage.getItem("Token")
-        if (!token) {
-            toast.error("Debes iniciar sesión para ver el producto :D!")
-            navigate("/login")
-            return
-        }
         getProduct(id)
             .then((prod) => {
                 setProduct(prod)
