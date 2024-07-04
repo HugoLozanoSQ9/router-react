@@ -125,6 +125,35 @@ Static Site Generation
 -SEO 
 -Entender que problemas resuelve
 
-¿Que es NEXT?
+## ¿Que es NEXT?
+
 Es un framework de react
 
+Sirve para: 
+
+-Hacer SSR y SSG
+-Routing integrado basado en el sistema de archivos
+-Ayuda a mejorar el SEO 
+-Mejor Dx que react solo  (developer experience)
+
+### Estatico
+
+Se considera estático a los sitios web que tienen un HTML CSS Y JS que nunca cambia
+
+Esto no implica que no tenga funcionalidades el sitio (esto no aplica con conditional rendering)
+
+principalmente es por los archivos NO por el contenido.
+
+### ¿Por que Next? 
+
+-Routing integrado basado en el file system
+-Nos permite hacer todas las estrategias de renderizado
+-Ayuda a mejorar el SEO
+-Mejor DR que REACT solo
+-0 configuraciones
+-Optimización
+-Soporta variables de entorno
+
+# Creando :
+
+npm create next-app@latest
